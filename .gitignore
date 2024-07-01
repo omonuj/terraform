@@ -3,3 +3,7 @@
 *.tfstate.backup
 *.tfplan
 .terraform/
+.terraform.lock.hcl
+
+# Credentials and secrets
+*.pem
