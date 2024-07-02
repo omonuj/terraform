@@ -11,3 +11,7 @@
 *.crt
 
 # System and editor files
+.DS_Store
+.vscode/
+.vscode-remote-containers/
+*.log
