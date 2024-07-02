@@ -7,3 +7,7 @@
 
 # Credentials and secrets
 *.pem
+*.key
+*.crt
+
+# System and editor files
