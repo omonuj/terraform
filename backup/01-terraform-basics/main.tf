@@ -17,4 +17,8 @@ resource "aws_s3_bucket_versioning" "versioning_example" {
     status = "Enabled"
   }
 }
-
+
+
+resource "aws_iam_user" "my_iam_user" {
+    name = "my_iam_user_abc_updated"
+}
