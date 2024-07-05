@@ -13,4 +13,8 @@ resource "aws_s3_bucket" "my_s3_bucket" {
 
 resource "aws_s3_bucket_versioning" "versioning_example" {
   bucket = aws_s3_bucket.my_s3_bucket.id
-  versioning_configuration {
+  versioning_configuration {
+    status = "Enabled"
+  }
+}
+
