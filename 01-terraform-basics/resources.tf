@@ -8,4 +8,8 @@ resource "aws_s3_bucket" "my_s3_bucket" {
 
 }
 resource "aws_s3_bucket_versioning" "versioning" {  
-  bucket = aws_s3_bucket.my_s3_bucket.id  
+  bucket = aws_s3_bucket.my_s3_bucket.id  
+
+    versioning_configuration {
+        status = "Enabled"
+    }
