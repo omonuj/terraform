@@ -12,4 +12,8 @@ resource "aws_s3_bucket_versioning" "versioning" {
 
     versioning_configuration {
         status = "Enabled"
-    }
+    }
+}
+
+
+resource "aws_iam_user" "my_iam_user" {
