@@ -16,4 +16,6 @@ resource "aws_s3_bucket_versioning" "versioning" {
 }
 
 
-resource "aws_iam_user" "my_iam_user" {
+resource "aws_iam_user" "my_iam_user" {
+  name = "devops_user_omonuj_001"
+} 
