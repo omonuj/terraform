@@ -8,4 +8,8 @@ variable "users" {
 
 provider "aws" {
   region  = "us-east-1"
-  //version = "~> 2.46" (No longer necessary)
+  //version = "~> 2.46" (No longer necessary)
+}
+
+resource "aws_iam_user" "my_iam_users" {
+  for_each = var.users
