@@ -8,4 +8,8 @@ variable "users" {
 
 
 provider "aws" {
-    region = "eu-north-1"
+    region = "eu-north-1"
+}
+
+resource "aws_iam_user" "my_iam_user" {
+    for_each = var.users
