@@ -16,4 +16,7 @@ resource "aws_iam_user" "my_iam_user" {
     name     = each.key
     tags = {
         Country = each.value.country
-        Department = each.value.department
+        Department = each.value.department
+    }  
+} 
+ 
