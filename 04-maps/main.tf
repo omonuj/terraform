@@ -12,4 +12,8 @@ provider "aws" {
 }
 
 resource "aws_iam_user" "my_iam_user" {
-    for_each = var.users
+    for_each = var.users
+    name     = each.key
+    tags = {
+        Country = each.value.country
+        Department = each.value.department
