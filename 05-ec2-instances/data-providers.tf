@@ -18,4 +18,7 @@ data "aws_ami" "amazon_linux_2" {
     values = ["hvm"]
   }
 }
-
+
+data "aws_ami_ads" "aws_linux_2_latest_ids" {
+    owners = ["amazon"]
+}
