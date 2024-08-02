@@ -18,4 +18,10 @@ resource "aws_default_vpc" "default" {
 }
 
 
-
+
+// HTTP Server -> SG
+//SG -> 80 TCP, 22  TCP, CIDR ["0.0.0.0/0"] 
+
+resource "aws_security_group" "http_server_sg" {
+  name   = "http_server_sg"
+  vpc_id = aws_default_vpc.default.id
