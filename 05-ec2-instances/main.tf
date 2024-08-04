@@ -51,4 +51,11 @@ resource "aws_security_group" "http_server_sg" {
     Name = "http_server_sg"
   }
 }
-
+
+
+#EC2 Intance -> Amazon Linux 2
+
+resource "aws_instance" "http_server" {
+  ami           = data.aws_ami.amazon_linux_2.id
+  instance_type = "t3.micro"
+  key_name      = "default-ec2"
