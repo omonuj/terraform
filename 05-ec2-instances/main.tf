@@ -64,4 +64,11 @@ resource "aws_instance" "http_server" {
 
   subnet_id = tolist(data.aws_subnet_ids.default_subnets.ids)[0]
 
-  tags = {
+  tags = {
+    Name = "http_server"
+  }
+
+  connection {
+    type        = "ssh"
+    host        = self.public_ip
+    user        = "ec2-user"
