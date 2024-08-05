@@ -58,4 +58,10 @@ resource "aws_security_group" "http_server_sg" {
 resource "aws_instance" "http_server" {
   ami           = data.aws_ami.amazon_linux_2.id
   instance_type = "t3.micro"
-  key_name      = "default-ec2"
+  key_name      = "default-ec2"
+
+  vpc_security_group_ids = [aws_security_group.http_server_sg.id]
+
+  subnet_id = tolist(data.aws_subnet_ids.default_subnets.ids)[0]
+
+  tags = {
