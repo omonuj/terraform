@@ -78,4 +78,10 @@ resource "aws_instance" "http_server" {
   provisioner "remote-exec" {
     inline = [
       "sudo yum update -y",
-      "sudo yum install -y httpd",
+      "sudo yum install -y httpd",
+      "sudo systemctl enable httpd",
+      "sudo systemctl start httpd",
+      "echo Welcome to Omonuj - Virtual Server is at ${self.public_dns} | sudo tee /var/www/html/index.html"
+    ]
+  }
+}
