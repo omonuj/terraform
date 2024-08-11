@@ -34,4 +34,12 @@ resource "aws_security_group" "http_server_sg" {
   }
 
   tags = {
-    name = "http_server_sg"
+    name = "http_server_sg"
+  }
+}
+
+resource "aws_security_group" "elb_sg" {
+  name   = "elb_sg"
+  vpc_id = aws_default_vpc.default.id
+
+  ingress {
