@@ -64,4 +64,11 @@ resource "aws_elb" "elb" {
   security_groups = [aws_security_group.elb_sg.id]
   instances       = values(aws_instance.http_servers).*.id
 
-  listener {
+  listener {
+    instance_port     = 80
+    instance_protocol = "http"
+    lb_port           = 80
+    lb_protocol       = "http"
+  }
+}
+
