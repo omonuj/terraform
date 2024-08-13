@@ -56,4 +56,12 @@ resource "aws_security_group" "elb_sg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-}
+}
+
+resource "aws_elb" "elb" {
+  name            = "elb"
+  subnets         = data.aws_subnets.default_subnets.ids
+  security_groups = [aws_security_group.elb_sg.id]
+  instances       = values(aws_instance.http_servers).*.id
+
+  listener {
