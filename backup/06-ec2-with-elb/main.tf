@@ -78,4 +78,12 @@ resource "aws_instance" "http_servers" {
   key_name               = "default-ec2"
   instance_type          = "t2.micro"
   vpc_security_group_ids = [aws_security_group.http_server_sg.id]
-
+
+  for_each  = toset(data.aws_subnets.default_subnets.ids)
+  subnet_id = each.value
+
+  tags = {
+    name : "http_servers_${each.value}"
+  }
+
+  connection {
