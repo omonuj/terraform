@@ -86,4 +86,11 @@ resource "aws_instance" "http_servers" {
     name : "http_servers_${each.value}"
   }
 
-  connection {
+  connection {
+    type        = "ssh"
+    host        = self.public_ip
+    user        = "ec2-user"
+    private_key = file(var.aws_key_pair)
+  }
+
+  provisioner "remote-exec" {
