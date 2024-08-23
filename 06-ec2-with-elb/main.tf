@@ -52,4 +52,11 @@ resource "aws_security_group" "elb_sg" {
 
 
 }
-
+
+
+############################################
+# Load Balancer Resource
+############################################
+
+resource "aws_elb" "elb" {
+  name = "elb"
