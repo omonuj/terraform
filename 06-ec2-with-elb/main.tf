@@ -73,4 +73,11 @@ resource "aws_elb" "elb" {
   }
 
 }
-
+
+###########################################
+#EC2 Intance -> Amazon Linux 2
+###########################################
+
+resource "aws_instance" "http_servers" {
+  ami           = data.aws_ami.amazon_linux_2.id
+  instance_type = "t3.micro"
