@@ -59,4 +59,11 @@ resource "aws_security_group" "elb_sg" {
 ############################################
 
 resource "aws_elb" "elb" {
-  name = "elb"
+  name = "elb"
+  subnets = data.aws_subnet_ids.default_subnets.ids
+  security_groups = [aws_security_group.elb_sg.id]
+  instances = values(aws_instance.http_servers).*.id
+
+
+  listener {
+    instance_port     = 80
