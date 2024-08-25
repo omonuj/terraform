@@ -87,4 +87,11 @@ resource "aws_instance" "http_servers" {
   for_each = data.aws_subnet_ids.default_subnets.ids
   subnet_id = each.value
   
-  tags = {
+  tags = {
+    Name = "http_servers_${each.value}"
+  }
+
+  connection {
+    type        = "ssh"
+    host        = self.public_ip
+    user        = "ec2-user"
