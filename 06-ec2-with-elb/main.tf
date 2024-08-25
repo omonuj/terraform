@@ -80,4 +80,11 @@ resource "aws_elb" "elb" {
 
 resource "aws_instance" "http_servers" {
   ami           = data.aws_ami.amazon_linux_2.id
-  instance_type = "t3.micro"
+  instance_type = "t3.micro"
+  key_name      = "default-ec2"
+  vpc_security_group_ids = [aws_security_group.elb_sg.id]
+
+  for_each = data.aws_subnet_ids.default_subnets.ids
+  subnet_id = each.value
+  
+  tags = {
