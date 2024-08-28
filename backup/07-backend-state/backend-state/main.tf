@@ -10,4 +10,11 @@ resource "aws_s3_bucket" "enterprise_backend_state" {
     lifecycle {
         prevent_destroy = true
     }
-
+
+#    versioning {
+#        enabled = true
+#    }
+#
+#    server_side_encryption_configuration {
+#        rule {
+#            apply_server_side_encryption_by_default {
