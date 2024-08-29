@@ -23,4 +23,11 @@ resource "aws_s3_bucket" "enterprise_backend_state" {
 #        }
 #    }
 
+}
+
+resource "aws_s3_bucket_versioning" "versioning_example" {
+  bucket = aws_s3_bucket.enterprise_backend_state.id
+  versioning_configuration {
+    status = "Enabled"
+  }
 }
