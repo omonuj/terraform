@@ -10,4 +10,10 @@ terraform {
 
 provider "aws" {
   region = "eu-north-1"
-}
+}
+
+
+#######################################
+# Create S3 Bucket to store users state
+#######################################
+
