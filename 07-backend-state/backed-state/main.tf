@@ -16,4 +16,10 @@ provider "aws" {
 #######################################
 # Create S3 Bucket to store users state
 #######################################
-
+
+resource "aws_s3_bucket" "enterprise_backend_state" {
+  bucket = "dev-application-backend-state-omonuj-001"
+
+  lifecycle{
+    prevent_destroy = true
+  }
