@@ -41,4 +41,10 @@ resource "aws_s3_bucket" "enterprise_backend_state" {
     }
   }
 
-}
+}
+
+
+######################################
+# Locking state with DynamoDB
+######################################
+
