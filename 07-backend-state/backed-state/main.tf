@@ -47,4 +47,10 @@ resource "aws_s3_bucket" "enterprise_backend_state" {
 ######################################
 # Locking state with DynamoDB
 ######################################
+
+resource "aws_dynamodb_table" "enterprise_backend_lock" {
+  name         = "dev_application_backend"
+  billing_mode = "PAY_PER_REQUEST"
+
+  hash_key = "LockID"
 
