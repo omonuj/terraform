@@ -3,4 +3,9 @@ terraform {
     aws = {
       source  = "hashicorp/aws"
       version = "~> 2.46"
-    }
+    }
+  }
+
+  backend "s3" {}
+}
+
