@@ -3,4 +3,9 @@ variable "application_name" {
 }
 
 variable "project_name" {
-  default = "users"
+  default = "users"
+}
+
+variable "environment" {
+  default = "dev"
+}
