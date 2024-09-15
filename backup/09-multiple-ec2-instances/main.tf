@@ -3,4 +3,10 @@ provider "aws" {
   //version = "~> 2.46"
 }
 
-resource "aws_default_vpc" "default" {
+resource "aws_default_vpc" "default" {
+
+}
+
+resource "aws_security_group" "http_server_sg" {
+  name = "http_server_sg"
+  //vpc_id = "vpc-c49ff1be"
