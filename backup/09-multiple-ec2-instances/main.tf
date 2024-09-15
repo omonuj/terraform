@@ -9,4 +9,9 @@ resource "aws_default_vpc" "default" {
 
 resource "aws_security_group" "http_server_sg" {
   name = "http_server_sg"
-  //vpc_id = "vpc-c49ff1be"
+  //vpc_id = "vpc-c49ff1be"
+  vpc_id = aws_default_vpc.default.id
+
+  ingress {
+    from_port   = 80
+    to_port     = 80
