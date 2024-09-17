@@ -37,4 +37,10 @@ resource "aws_security_group" "http_server_sg" {
     name = "http_server_sg"
   }
 }
-
+
+resource "aws_instance" "http_server" {
+  #ami                   = "ami-062f7200baf2fa504"
+  count                  = 2
+  ami                    = data.aws_ami.aws_linux_2_latest.id
+  key_name               = "default-ec2"
+  instance_type          = "t2.micro"
