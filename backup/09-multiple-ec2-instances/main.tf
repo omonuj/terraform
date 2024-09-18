@@ -43,4 +43,9 @@ resource "aws_instance" "http_server" {
   count                  = 2
   ami                    = data.aws_ami.aws_linux_2_latest.id
   key_name               = "default-ec2"
-  instance_type          = "t2.micro"
+  instance_type          = "t2.micro"
+  vpc_security_group_ids = [aws_security_group.http_server_sg.id]
+
+  //subnet_id              = "subnet-3f7b2563"
+  subnet_id = tolist(data.aws_subnet_ids.default_subnets.ids)[0]
+}
