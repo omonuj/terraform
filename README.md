@@ -8,3 +8,12 @@ exactly one new concept on top of the previous one.
 Everything here targets AWS and is written against the `hashicorp/aws` provider.
 
 ---
+
+## Learning Path
+
+| Directory | Concept | What it builds |
+|---|---|---|
+| `01-terraform-basics/` | Providers, resources, outputs | A single IAM user, exported via `output` |
+| `02-terraform-basics/` | Variables and `.tfvars` | Parameterised IAM user naming |
+| `03-list-and-sets/` | `count`, lists, sets | Multiple IAM users from a list |
+| `04-maps/` | Maps and lookups | Per-user configuration driven by a map |
