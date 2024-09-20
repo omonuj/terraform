@@ -17,3 +17,12 @@ Everything here targets AWS and is written against the `hashicorp/aws` provider.
 | `02-terraform-basics/` | Variables and `.tfvars` | Parameterised IAM user naming |
 | `03-list-and-sets/` | `count`, lists, sets | Multiple IAM users from a list |
 | `04-maps/` | Maps and lookups | Per-user configuration driven by a map |
+| `05-ec2-instances/` | Data sources, security groups | EC2 instance with dynamic AMI lookup and SSH/HTTP access |
+| `06-ec2-with-elb/` | Locals, ELB, multi-AZ | EC2 behind a classic Elastic Load Balancer |
+| `07-backend-state/` | Remote state, workspaces | S3 backend with DynamoDB state locking |
+
+The `backup/` directory holds earlier iterations of the same exercises, plus two
+extras that were never promoted to the top level:
+
+- `backup/08-modules/` — a reusable `users` module consumed by separate `dev/`
+  and `qa/` root configurations
