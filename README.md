@@ -35,3 +35,12 @@ extras that were never promoted to the top level:
 
 **Language fundamentals**
 - Providers, resources, and outputs
+- Input variables via `.tfvars`, `-var`, and `TF_VAR_*` environment variables
+- Lists, sets, and maps; `count` and `for_each`
+- `locals`, `zipmap`, and `tolist` for shaping data
+- Data sources (`aws_ami`, `aws_subnet_ids`, `aws_default_vpc`)
+
+**AWS resources**
+- IAM users
+- Default VPC and subnet discovery
+- Security groups with ingress/egress rules
