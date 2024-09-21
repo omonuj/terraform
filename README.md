@@ -26,3 +26,12 @@ extras that were never promoted to the top level:
 
 - `backup/08-modules/` — a reusable `users` module consumed by separate `dev/`
   and `qa/` root configurations
+- `backup/09-multiple-ec2-instances/` — `count`-based EC2 scaling across the
+  default VPC's subnets
+
+---
+
+## Concepts Covered
+
+**Language fundamentals**
+- Providers, resources, and outputs
