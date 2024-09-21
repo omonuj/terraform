@@ -44,3 +44,11 @@ extras that were never promoted to the top level:
 - IAM users
 - Default VPC and subnet discovery
 - Security groups with ingress/egress rules
+- EC2 instances with key pairs and shell provisioning
+- Classic Elastic Load Balancer
+
+**State management**
+- S3 remote backend with `encrypt = true`
+- DynamoDB table for state locking
+- Partial backend configuration via `backend.hcl`
+- Workspaces for environment separation (`default`, `prod-env`)
