@@ -62,3 +62,12 @@ extras that were never promoted to the top level:
 ## Getting Started
 
 ### Install
+
+```bash
+brew install terraform
+terraform version
+```
+
+### Authenticate
+
+Export credentials rather than committing them:
