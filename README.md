@@ -52,3 +52,13 @@ extras that were never promoted to the top level:
 - DynamoDB table for state locking
 - Partial backend configuration via `backend.hcl`
 - Workspaces for environment separation (`default`, `prod-env`)
+
+**Module design**
+- Extracting a root config into a reusable module
+- Consuming one module from multiple environments with different inputs
+
+---
+
+## Getting Started
+
+### Install
