@@ -71,3 +71,13 @@ terraform version
 ### Authenticate
 
 Export credentials rather than committing them:
+
+```bash
+export AWS_ACCESS_KEY_ID=...
+export AWS_SECRET_ACCESS_KEY=...
+```
+
+### Run a lesson
+
+```bash
+cd 01-terraform-basics
