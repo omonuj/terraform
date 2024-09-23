@@ -81,3 +81,12 @@ export AWS_SECRET_ACCESS_KEY=...
 
 ```bash
 cd 01-terraform-basics
+terraform init
+terraform plan
+terraform apply
+terraform destroy   # always clean up
+```
+
+---
+
+## Command Reference
