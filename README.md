@@ -99,3 +99,12 @@ terraform validate                  # check syntax and internal consistency
 terraform fmt                       # canonical formatting
 terraform plan                      # preview changes
 terraform apply                     # execute
+terraform destroy                   # tear down
+terraform show                      # inspect current state
+terraform console                   # interactive expression evaluation
+```
+
+**Saved plans**
+
+```bash
+terraform plan -out iam.tfplan
