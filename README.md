@@ -90,3 +90,12 @@ terraform destroy   # always clean up
 ---
 
 ## Command Reference
+
+**Core workflow**
+
+```bash
+terraform init                      # download providers, configure backend
+terraform validate                  # check syntax and internal consistency
+terraform fmt                       # canonical formatting
+terraform plan                      # preview changes
+terraform apply                     # execute
