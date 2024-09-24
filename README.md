@@ -108,3 +108,12 @@ terraform console                   # interactive expression evaluation
 
 ```bash
 terraform plan -out iam.tfplan
+terraform apply "iam.tfplan"
+```
+
+**Targeting individual resources**
+
+```bash
+terraform apply -target="aws_iam_user.my_iam_user"
+terraform apply -target=aws_default_vpc.default
+terraform apply -target=data.aws_subnet_ids.default_subnets
