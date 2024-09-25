@@ -136,3 +136,12 @@ terraform apply -refresh=false
 **Workspaces**
 
 ```bash
+terraform workspace list
+terraform workspace new prod-env
+terraform workspace select prod-env
+terraform workspace show
+```
+
+---
+
+## Remote State Setup
