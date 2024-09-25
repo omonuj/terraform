@@ -126,3 +126,13 @@ terraform apply -target=data.aws_ami.aws_linux_2_latest
 terraform plan -var="iam_user_name_prefix=VALUE_FROM_COMMAND_LINE"
 export TF_VAR_iam_user_name_prefix=FROM_ENV_VARIABLE_IAM_PREFIX
 ```
+
+**Skipping refresh** (faster iteration when you know state is current)
+
+```bash
+terraform apply -refresh=false
+```
+
+**Workspaces**
+
+```bash
