@@ -117,3 +117,12 @@ terraform apply "iam.tfplan"
 terraform apply -target="aws_iam_user.my_iam_user"
 terraform apply -target=aws_default_vpc.default
 terraform apply -target=data.aws_subnet_ids.default_subnets
+terraform apply -target=data.aws_ami.aws_linux_2_latest
+```
+
+**Passing variables**
+
+```bash
+terraform plan -var="iam_user_name_prefix=VALUE_FROM_COMMAND_LINE"
+export TF_VAR_iam_user_name_prefix=FROM_ENV_VARIABLE_IAM_PREFIX
+```
