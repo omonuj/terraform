@@ -154,3 +154,12 @@ terraform {
   backend "s3" {}
 }
 ```
+
+Supply the rest at init time:
+
+```bash
+terraform init -backend-config=backend.hcl
+```
+
+Where `backend.hcl` points at an S3 bucket for state storage and a DynamoDB
+table for locking. The bucket and table must exist before the first `init` —
