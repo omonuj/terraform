@@ -145,3 +145,12 @@ terraform workspace show
 ---
 
 ## Remote State Setup
+
+`07-backend-state/` uses a partial backend configuration so the bucket details
+stay out of version-controlled `.tf` files:
+
+```hcl
+terraform {
+  backend "s3" {}
+}
+```
