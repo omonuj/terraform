@@ -163,3 +163,12 @@ terraform init -backend-config=backend.hcl
 
 Where `backend.hcl` points at an S3 bucket for state storage and a DynamoDB
 table for locking. The bucket and table must exist before the first `init` —
+they are bootstrapped by `07-backend-state/backed-state/`.
+
+---
+
+## Notes
+
+- Resources here are chosen to stay inside or near the AWS free tier
+  (`t2.micro`, default VPC), but **running these will incur charges**. Always
+  `terraform destroy` when finished.
