@@ -172,3 +172,11 @@ they are bootstrapped by `07-backend-state/backed-state/`.
 - Resources here are chosen to stay inside or near the AWS free tier
   (`t2.micro`, default VPC), but **running these will incur charges**. Always
   `terraform destroy` when finished.
+- Never commit `.pem` keys, `terraform.tfstate`, or credentials. See
+  `.gitignore`.
+- Regions vary between lessons (`us-east-1` in the earlier ones, `eu-north-1`
+  for the backend-state work) — check the provider block before applying.
+
+## License
+
+MIT
